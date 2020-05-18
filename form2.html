@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Data Pernikahan</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/fstyle.css">
+	<script src="js/jquery.js"></script>
+	<script src="js/parsley.min.js"></script>
+	<script src="js/fjs.js"></script>
+
+</head>
+<body>
+<form class="demo-form" action="print.php" method="POST">
+  <div class="form-section">
+  	<div class="page-header"><h3>Lengkapi Data Mempelai Pria</h3></div>
+    <div class="fconten">
+    	<table width="100%">	
+    		<tr>
+    			<td class="tforms">
+    				<label for="kabupaten" class="control-label">Kabupaten/Kota :</label><input type="text" class="form-control" name="kabupaten" id="kabupaten">
+    			</td>
+    			<td class="tforms">
+    				<label for="kecamatan" class="control-label">Kecamatan :</label><input type="text" class="form-control" name="kecamatan">
+    			</td>
+    			<td class="tforms">
+    				<label for="desa" class="control-label">Desa/Kelurahan :</label><input type="text" class="form-control" name="desa">
+    			</td>
+    		</tr>
+    		<tr>
+    			<td class="tforms">
+    				<label for="nama-pria" class="control-label">Nama Lengkap :</label><input type="text" class="form-control" name="nama-pria">
+    			</td>
+    			<td class="tforms">
+    				<label for="bin-pria" class="control-label">Nama Ayah Kandung:</label><input type="text" class="form-control" name="bin-pria">
+    			</td>
+    			<td class="tforms"></td>
+    		</tr>
+    		<tr>
+    			<td class="tforms">
+    				<label for="tempat-lahir-pria" class="control-label">Tempat Tanggal Lahir :</label><input type="text" class="form-control" name="tempat-lahir-pria" placeholder="Tempat">
+    			</td>
+    			<td class="tforms">
+    				<label for="tgl-lahir-pria" class="control-label">&nbsp;</label><input type="date" class="form-control" name="tgl-lahir-pria" style="border: none; -webkit-box-shadow: none; border-bottom: 1px solid #b0b0b0; border-radius: 0">
+    			</td>
+    			<td class="tforms"></td>
+    		</tr>
+    		<tr>
+    			<td class="tforms">
+    				<label for="warganegara-pria" class="control-label">Warga Negara:</label><input type="text" class="form-control" name="warganegara-pria">
+    			</td>
+    			<td class="tforms">
+    				<div class="form-group">
+						 <label for="dropdown-test" class="control-label">Agama</label>
+						 <select class="form-control" name="agama-pria">
+						  <option value="">-- Pilih --</option>
+						  <option value="Islam">Islam</option>
+						  <option value="Kristen">Kristen</option>
+						  <option value="Hindu">Hindu</option>
+						  <option value="Budha">Budha</option>
+						</select>
+					</div>
+    			</td>
+    			<td class="tforms">
+                    <label for="pekerjaan-pria" class="control-label">Pekerjaan :</label><input type="text" class="form-control" name="pekerjaan-pria">
+                </td>
+    		</tr>
+    		<tr>
+    			<td class="tforms" colspan="2">
+    				<label for="alamat-pria">Alamat :</label>
+  					<textarea class="form-control" rows="5" id="alamat-pria" name="alamat-pria"></textarea>
+    			</td>
+    			<td class="tforms">
+    				<div class="form-group">
+						 <label for="status-pria" class="control-label">Status Perkawinan :</label>
+						 <select class="form-control" name="status-pria">
+						  <option value="">-- Pilih --</option>
+						  <option value="Jejaka">Jejaka</option>
+						  <option value="Duda">Duda</option>
+						</select>
+					</div>
+    			</td>
+    		</tr>
+    	</table>	
+    </div>
+  </div>
+
+  <div class="form-section">
+    <div class="page-header"><h3>Lengkapi Data Mempelai Wanita</h3></div>
+    <div class="fconten">
+            <table width="60%"> 
+            <tr>
+                <td class="tforms">
+                    <label for="nama-wanita" class="control-label">Nama Lengkap :</label><input type="text" class="form-control" name="nama-wanita">
+                </td>
+                <td class="tforms">
+                    <label for="bin-wanita" class="control-label">Nama Ayah Kandung:</label><input type="text" class="form-control" name="bin-wanita">
+                </td>
+            </tr>
+            <tr>
+                <td class="tforms">
+                    <label for="tempat-lahir-wanita" class="control-label">Tempat Tanggal Lahir :</label><input type="text" class="form-control" name="tempat-lahir-wanita" placeholder="Tempat">
+                </td>
+                <td class="tforms">
+                    <label for="tgl-lahir-wanita" class="control-label">&nbsp;</label><input type="date" class="form-control" name="tgl-lahir-wanita" style="border: none; -webkit-box-shadow: none; border-bottom: 1px solid #b0b0b0; border-radius: 0">
+                </td>
+            </tr>
+            <tr>
+                <td class="tforms">
+                    <label for="warganegara-wanita" class="control-label">Warga Negara :</label><input type="text" class="form-control" name="warganegara-wanita">
+                </td>
+                <td class="tforms">
+                    <div class="form-group">
+                         <label for="agama-wanita" class="control-label">Agama</label>
+                         <select class="form-control" name="agama-wanita">
+                          <option value="">-- Pilih --</option>
+                          <option value="Islam">Islam</option>
+                          <option value="Kristen">Kristen</option>
+                          <option value="Hindu">Hindu</option>
+                          <option value="Budha">Budha</option>
+                        </select>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="tforms">
+                    <label for="pekerjaan-wanita" class="control-label">Pekerjaan :</label><input type="text" class="form-control" name="pekerjaan-wanita">
+                </td>
+                <td class="tforms">
+                    <div class="form-group">
+                         <label for="status-wanita" class="control-label">Status Perkawinan :</label>
+                         <select class="form-control" name="status-wanita">
+                          <option value="">-- Pilih --</option>
+                          <option value="Perawan">Perawan</option>
+                          <option value="Janda">Janda</option>
+                        </select>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="tforms" colspan="2">
+                    <label for="alamat-wanita">Alamat :</label>
+                    <textarea class="form-control" rows="5" id="alamat-wanita" name="alamat-wanita"></textarea>
+                </td>
+                
+            </tr>
+        </table>
+    </div>
+  </div>
+
+  <div class="form-section">
+  	<div class="page-header"><h3>Lengkapi Data Orang Tua Mempelai Pria</h3></div>
+    <div class="fconten">
+    	<div class="col-md-6" style="border-right: 1px solid #6c6767;">
+    		<table width="100%">	
+    		<tr>
+    			<td><h4>Nama Ayah</h4></td>
+    			<td></td>
+    		</tr>
+    		<tr>
+    			<td class="tforms">
+    				<label for="nama-ayah-pria" class="control-label">Nama Lengkap :</label><input type="text" class="form-control" name="nama-ayah-pria">
+    			</td>
+    			<td class="tforms"></td>
+    		</tr>
+    		<tr>
+    			<td class="tforms">
+    				<label for="tempat-lahir-ayah-pria" class="control-label">Tempat Tanggal Lahir :</label><input type="text" class="form-control" name="tempat-lahir-ayah-pria" placeholder="Tempat">
+    			</td>
+    			<td class="tforms">
+                    <label for="tgl-lahir-ayah-pria" class="control-label">&nbsp;</label><input type="date" class="form-control" name="tgl-lahir-ayah-pria" style="border: none; -webkit-box-shadow: none; border-bottom: 1px solid #b0b0b0; border-radius: 0">
+                </td>
+    		</tr>
+    		<tr>
+    			<td class="tforms">
+    				<label for="warganegara-ayah-pria" class="control-label">Warga Negara :</label><input type="text" class="form-control" name="warganegara-ayah-pria">
+    			</td>
+    			<td class="tforms">
+    				<div class="form-group">
+						 <label for="agama-ayah-pria" class="control-label">Agama</label>
+						 <select class="form-control" name="agama-ayah-pria">
+						  <option value="">-- Pilih --</option>
+						  <option value="Islam">Islam</option>
+						  <option value="Kristen">Kristen</option>
+						  <option value="Hindu">Hindu</option>
+						  <option value="Budha">Budha</option>
+						</select>
+					</div>
+    			</td>
+    		</tr>
+    		<tr>
+    			<td class="tforms">
+    				<label for="pekerjaan-ayah-pria" class="control-label">Pekerjaan :</label><input type="text" class="form-control" name="pekerjaan-ayah-pria">
+    			</td>
+    			<td class="tforms"></td>
+    		</tr>
+    		<tr>
+    			<td class="tforms" colspan="2">
+    				<label for="alamat-ayah-pria">Alamat :</label>
+  					<textarea class="form-control" rows="5" id="alamat-ayah-pria" name="alamat-ayah-pria"></textarea>
+    			</td>
+    			
+    		</tr>
+    	</table>
+    	</div>
+    	<div class="col-md-6">
+    		<table width="100%">	
+    		<tr>
+                <td><h4>Nama Ibu</h4></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="tforms">
+                    <label for="nama-ibu-pria" class="control-label">Nama Lengkap :</label><input type="text" class="form-control" name="nama-ibu-pria">
+                </td>
+                <td class="tforms"></td>
+            </tr>
+            <tr>
+                <td class="tforms">
+                    <label for="tempat-lahir-ibu-pria" class="control-label">Tempat Tanggal Lahir :</label><input type="text" class="form-control" name="tempat-lahir-ibu-pria" placeholder="Tempat">
+                </td>
+                <td class="tforms">
+                    <label for="tgl-lahir-ibu-pria" class="control-label">&nbsp;</label><input type="date" class="form-control" name="tgl-lahir-ibu-pria" style="border: none; -webkit-box-shadow: none; border-bottom: 1px solid #b0b0b0; border-radius: 0">
+                </td>
+            </tr>
+            <tr>
+                <td class="tforms">
+                    <label for="warganegara-ibu-pria" class="control-label">Warga Negara :</label><input type="text" class="form-control" name="warganegara-ibu-pria">
+                </td>
+                <td class="tforms">
+                    <div class="form-group">
+                         <label for="agama-ibu-pria" class="control-label">Agama</label>
+                         <select class="form-control" name="agama-ibu-pria">
+                          <option value="">-- Pilih --</option>
+                          <option value="Islam">Islam</option>
+                          <option value="Kristen">Kristen</option>
+                          <option value="Hindu">Hindu</option>
+                          <option value="Budha">Budha</option>
+                        </select>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="tforms">
+                    <label for="pekerjaan-ibu-pria" class="control-label">Pekerjaan :</label><input type="text" class="form-control" name="pekerjaan-ibu-pria">
+                </td>
+                <td class="tforms"></td>
+            </tr>
+            <tr>
+                <td class="tforms" colspan="2">
+                    <label for="alamat-ibu-pria">Alamat :</label>
+                    <textarea class="form-control" rows="5" id="alamat-ibu-pria" name="alamat-ibu-pria"></textarea>
+                </td>
+                
+            </tr>
+    	</table>
+    	</div>
+    </div>
+  </div>
+
+  <div class="form-section">
+    <div class="page-header"><h3>Lengkapi Data Orang Tua Mempelai Wanita</h3></div>
+    <div class="fconten">
+        <div class="col-md-6" style="border-right: 1px solid #6c6767;">
+            <table width="100%">    
+            <tr>
+                <td><h4>Nama Ayah</h4></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="tforms">
+                    <label for="nama-ayah-wanita" class="control-label">Nama Lengkap :</label><input type="text" class="form-control" name="nama-ayah-wanita">
+                </td>
+                <td class="tforms"></td>
+            </tr>
+            <tr>
+                <td class="tforms">
+                    <label for="tempat-lahir-ayah-wanita" class="control-label">Tempat Tanggal Lahir :</label><input type="text" class="form-control" name="tempat-lahir-ayah-wanita" placeholder="Tempat">
+                </td>
+                <td class="tforms">
+                    <label for="tgl-lahir-ayah-wanita" class="control-label">&nbsp;</label><input type="date" class="form-control" name="tgl-lahir-ayah-wanita" style="border: none; -webkit-box-shadow: none; border-bottom: 1px solid #b0b0b0; border-radius: 0">
+                </td>
+            </tr>
+            <tr>
+                <td class="tforms">
+                    <label for="warganegara-ayah-wanita" class="control-label">Warga Negara :</label><input type="text" class="form-control" name="warganegara-ayah-wanita">
+                </td>
+                <td class="tforms">
+                    <div class="form-group">
+                         <label for="agama-ayah-wanita" class="control-label">Agama</label>
+                         <select class="form-control" name="agama-ayah-wanita">
+                          <option value="">-- Pilih --</option>
+                          <option value="Islam">Islam</option>
+                          <option value="Kristen">Kristen</option>
+                          <option value="Hindu">Hindu</option>
+                          <option value="Budha">Budha</option>
+                        </select>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="tforms">
+                    <label for="pekerjaan-ayah-wanita" class="control-label">Pekerjaan :</label><input type="text" class="form-control" name="pekerjaan-ayah-wanita">
+                </td>
+                <td class="tforms"></td>
+            </tr>
+            <tr>
+                <td class="tforms" colspan="2">
+                    <label for="alamat-ayah-wanita">Alamat :</label>
+                    <textarea class="form-control" rows="5" id="alamat-ayah-wanita" name="alamat-ayah-wanita"></textarea>
+                </td>
+                
+            </tr>
+        </table>
+        </div>
+        <div class="col-md-6">
+            <table width="100%">    
+            <tr>
+                <td><h4>Nama Ibu</h4></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="tforms">
+                    <label for="nama-ibu-wanita" class="control-label">Nama Lengkap :</label><input type="text" class="form-control" name="nama-ibu-wanita">
+                </td>
+                <td class="tforms"></td>
+            </tr>
+            <tr>
+                <td class="tforms">
+                    <label for="tempat-lahir-ibu-wanita" class="control-label">Tempat Tanggal Lahir :</label><input type="text" class="form-control" name="tempat-lahir-ibu-wanita" placeholder="Tempat">
+                </td>
+                <td class="tforms">
+                    <label for="tgl-lahir-ibu-wanita" class="control-label">&nbsp;</label><input type="date" class="form-control" name="tgl-lahir-ibu-wanita" style="border: none; -webkit-box-shadow: none; border-bottom: 1px solid #b0b0b0; border-radius: 0">
+                </td>
+            </tr>
+            <tr>
+                <td class="tforms">
+                    <label for="warganegara-ibu-wanita" class="control-label">Warga Negara :</label><input type="text" class="form-control" name="warganegara-ibu-wanita">
+                </td>
+                <td class="tforms">
+                    <div class="form-group">
+                         <label for="agama-ibu-wanita" class="control-label">Agama</label>
+                         <select class="form-control" name="agama-ibu-wanita">
+                          <option value="">-- Pilih --</option>
+                          <option value="Islam">Islam</option>
+                          <option value="Kristen">Kristen</option>
+                          <option value="Hindu">Hindu</option>
+                          <option value="Budha">Budha</option>
+                        </select>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="tforms">
+                    <label for="pekerjaan-ibu-wanita" class="control-label">Pekerjaan :</label><input type="text" class="form-control" name="pekerjaan-ibu-wanita">
+                </td>
+                <td class="tforms"></td>
+            </tr>
+            <tr>
+                <td class="tforms" colspan="2">
+                    <label for="alamat-ibu-wanita">Alamat :</label>
+                    <textarea class="form-control" rows="5" id="alamat-ibu-wanita" name="alamat-ibu-wanita"></textarea>
+                </td>
+                
+            </tr>
+        </table>
+        </div>
+    </div>
+  </div>
+  
+
+  <div class="form-section">
+  	<div class="page-header"><h3>Lengkapi Kematian Suami/Istri</h3></div>
+    <div class="fconten">
+    		<table width="60%">	
+    		<tr>
+    			<td class="tforms">
+    				<label for="nama-kematian" class="control-label">Nama Lengkap :</label><input type="text" class="form-control" name="nama-kematian">
+    			</td>
+    			<td class="tforms"></td>
+    		</tr>
+    		<tr>
+    			<td class="tforms">
+    				<label for="tempat-lahir-kematian" class="control-label">Tempat Tanggal Lahir :</label><input type="text" class="form-control" name="tempat-lahir-kematian" placeholder="Tempat">
+    			</td>
+    			<td class="tforms">
+                    <label for="tgl-kematian" class="control-label">&nbsp;</label><input type="date" class="form-control" name="tgl-kematian" style="border: none; -webkit-box-shadow: none; border-bottom: 1px solid #b0b0b0; border-radius: 0">
+                </td>
+    		</tr>
+    		<tr>
+    			<td class="tforms">
+    				<label for="warganegara-kematian" class="control-label">Warga Negara :</label><input type="text" class="form-control" name="warganegara-kematian">
+    			</td>
+    			<td class="tforms">
+    				<div class="form-group">
+						 <label for="agama-kematian" class="control-label">Agama</label>
+						 <select class="form-control" name="agama-kematian">
+						  <option value="">-- Pilih --</option>
+						  <option value="Islam">Islam</option>
+						  <option value="Kristen">Kristen</option>
+						  <option value="Hindu">Hindu</option>
+						  <option value="Budha">Budha</option>
+						</select>
+					</div>
+    			</td>
+    		</tr>
+    		<tr>
+    			<td class="tforms">
+    				<label for="pekerjan-kematian" class="control-label">Pekerjaan :</label><input type="text" class="form-control" name="pekerjan-kematian">
+    			</td>
+    			<td class="tforms">
+    				<label for="hari-kematian" class="control-label">Meninggal Dunia Pada Tanggal</label><input type="text" class="form-control" name="hari-kematian" placeholder="HH/BB/TTTT">
+    			</td>
+    		</tr>
+    		<tr>
+    			<td class="tforms" colspan="2">
+    				<label for="alamat-kematian">Tempat tinggal terakhir :</label>
+  					<textarea class="form-control" rows="5" id="alamat-kematian" name="alamat-kematian"></textarea>
+    			</td>
+    		</tr>
+    		<tr>
+    			<td class="tforms"><p style="color: red">*Lewati jika anda Duda/Duda karena bercerai</p></td>
+    		</tr>
+    	</table>
+    </div>
+  </div>
+
+  <div class="form-section">
+  	<div class="page-header"><h3>Lengkapi Data Rencana Pernikahan Anda</h3></div>
+    <div class="fconten">
+    		<table width="60%">	
+    		<tr>
+    			<td class="tforms">
+    				<label for="hari-nikah" class="control-label">Hari :</label><input type="text" class="form-control" name="hari-nikah">
+    			</td>
+    			<td class="tforms">
+    				<label for="maskawin" class="control-label">Maskawin :</label><input type="text" class="form-control" name="maskawin">
+    			</td>
+    		</tr>
+    		<tr>
+    			<td class="tforms">
+                    <label for="tgl-nikah" class="control-label">&nbsp;</label><input type="date" class="form-control" name="tgl-nikah" style="border: none; -webkit-box-shadow: none; border-bottom: 1px solid #b0b0b0; border-radius: 0">
+                </td>
+    			<td class="tforms">
+    				<div class="form-group">
+						 <label for="dibayar" class="control-label">Dibayar :</label>
+						 <select class="form-control" name="dibayar">
+						  <option value="">-- Pilih --</option>
+						  <option value="Tunai">Tunai</option>
+						  <option value="Hutang">Hutang</option>
+						</select>
+					</div>
+    			</td>
+    		</tr>
+    		<tr>
+    			<td class="tforms">
+    				<label for="pukul-nikah" class="control-label">Pukul :</label><input type="text" class="form-control" name="pukul-nikah">
+    			</td>
+    			<td class="tforms"></td>
+    		</tr>
+    		<tr>
+    			<td class="tforms">
+    				<label for="tempat-nikah" class="control-label">Tempat Pernikahan :</label><input type="text" class="form-control" name="tempat-nikah">
+    			</td>
+    			<td class="tforms"></td>
+    		</tr>
+    	</table>
+    </div>
+  </div>
+
+  <div class="form-navigation">
+  	<br>
+    <button type="button" class="previous btn btn-info pull-left">KEMBALI</button>
+    <button type="button" class="next btn btn-info pull-right">LANJUT &nbsp;<i class="fa fa-play"></i></button>
+    <input type="submit" class="btn btn-info btn-default pull-right">
+    <span class="clearfix"></span>
+  </div>
+</form>
+</body>
+</html>

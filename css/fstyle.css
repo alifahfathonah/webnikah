@@ -1,0 +1,59 @@
+.form-section {
+  /*padding-left: 15px;*/
+  /*border-left: 2px solid #FF851B;*/
+  display: none;
+}
+.form-section.current {
+  display: inherit;
+}
+.btn-info, .btn-default {
+  margin-top: 30px;
+  background-color:#6c6767;
+  border: none;
+  width: 115px; 
+}
+html.codepen body {
+  margin: 1em;
+}
+
+input[type="text"],
+select.form-control {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #b0b0b0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+input[type="text"]:focus,
+select.form-control:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.page-header{
+  background-color: #6c6767;
+  margin: 0; 
+  color: #fff;
+  padding-left: 20px;
+  padding-top:  15px;
+  font-weight: bold;
+  
+}
+.fconten{
+  padding-top: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.tform{
+}
+.tforms{
+  padding-top: 35px;
+  padding-left: 40px;
+  padding-right: 40px;
+  width: 30%;
+}
+.form-navigation{
+  padding: 35px;
+}
